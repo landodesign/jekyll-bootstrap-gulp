@@ -7,6 +7,7 @@ var cp          = require('child_process');
 var concat      = require('gulp-concat');
 var uglify 	    = require('gulp-uglify');
 var rename 	    = require('gulp-rename');
+var scsslint    = require('gulp-scss-lint');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -58,12 +59,20 @@ gulp.task('sass', function () {
 });
 
 /**
+ * Sass Lint
+ */
+gulp.task('scss-lint', function() {
+  return gulp.src('_scss/main.scss')
+    .pipe(scsslint());
+});
+
+/**
  * Concatenate all files .js
  */
 gulp.task('concat', function() {
     return gulp.src([
-      // Bootstrap
-      'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+      // Bootstrap from Node
+      // 'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
 
       // Custom Scripts
       '_js/scripts.js'
@@ -90,17 +99,20 @@ gulp.task('jsmin', function() {
 
 /**
  * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
+ * Watch scss files for CSSLint
+ * Watch js files for changes, concatenate and minify
+ * Watch html/assets/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
+    gulp.watch('_scss/*.scss', ['scss-lint']);
     gulp.watch('_js/*.js', ['concat']);
     gulp.watch('_js/*.js', ['jsmin']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', 'assets/*.*', '_posts/*'], ['jekyll-rebuild']);
 });
 
 /**
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch', 'concat', 'jsmin']);
+gulp.task('default', ['browser-sync', 'watch']); //, 'concat', 'jsmin', 'scss-lint'
