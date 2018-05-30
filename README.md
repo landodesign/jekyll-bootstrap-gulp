@@ -32,6 +32,10 @@ Basic dependencies installed:
 
 ## Usage
 
+To add your custom styles open _scss/main.scss
+
+To add your custom scripts open _js/scripts.js
+
 **Development mode**
 
 To run the tasks: (file watching, browser sync, auto-rebuild, CSS injecting)

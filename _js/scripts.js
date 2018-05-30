@@ -1,1 +1,1 @@
-$( "body" ).addClass( "porcamadonna" );
+$( "body" ).addClass( "test_body_class" );
