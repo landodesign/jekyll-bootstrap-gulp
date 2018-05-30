@@ -57,5 +57,4 @@ Visit Jekyll [docs](http://jekyllrb.com/docs/usage/)
 
 * Add support for SVG Sprites
 * Add support for Async JavaScript
-* Migrate from Node to Yarn 
 * Move Gulp Tasks in separate folder
