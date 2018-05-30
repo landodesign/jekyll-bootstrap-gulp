@@ -1,7 +1,7 @@
 Jekyll-Bootstrap-Gulp
 =============================
 
-A starter project including full setup for Jekyll, GulpJS, Bootstrap 3.x &amp; BrowserSync
+A starter project including full setup for Jekyll, GulpJS, Bootstrap 3.x, JavaScript &amp; BrowserSync
 
 ## System Preparation
 
@@ -19,7 +19,11 @@ Basic dependencies installed:
 * Sourcemaps Support
 * Autoprefixer
 * Gulp Sass
-* Broser Sync
+* BrowserSync
+* Concat
+* Uglify
+* Rename
+
 
 ## Local Installation
 
