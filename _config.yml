@@ -1,0 +1,7 @@
+name: Jekyll Bootstrap Gulp Boilerplate
+markdown: kramdown
+highlighter: pygments.rb # or rouge or null
+incremental: true
+sass:
+    style: :compressed
+exclude: ["node_modules", "gulpfile.js", "package.json"]
