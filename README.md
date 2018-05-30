@@ -8,8 +8,8 @@ A starter project including full setup for Jekyll, GulpJS, Bootstrap 3.x, JavaSc
 To use this starter project, you'll need the following things installed on your machine.
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
-2. [NodeJS](http://nodejs.org) - use the installer.
-3. [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp` (mac users may need sudo)
+2. [Yarn](https://yarnpkg.com/en/) - use the installer.
+3. [GulpJS](https://github.com/gulpjs/gulp) - `$ yarn global add gulp` (mac users may need sudo)
 
 ## Dependencies
 
@@ -28,8 +28,10 @@ Install the following dependencies as a minimum requirement:
 ## Local Installation
 
 1. Clone this repo, or download it into a directory of your choice.
-2. Inside the directory, run `npm install`.
+2. Inside the directory, run `yarn`.
 3. Install required dependencies (see above).
+
+If you're more familiar with NPM, see this Yarn [cheatsheet](https://devhints.io/yarn) for the equivalent commands.
 
 ## Usage
 
