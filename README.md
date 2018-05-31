@@ -1,7 +1,7 @@
 Jekyll-Bootstrap-Gulp
 =============================
 
-A starter project including full setup for Jekyll, GulpJS, Bootstrap 3.x, JavaScript &amp; BrowserSync
+A starter project including full setup for Jekyll, GulpJS, Bootstrap 3.x, JavaScript &amp; BrowserSync. Original project [here](https://github.com/shakyShane/jekyll-gulp-sass-browser-sync)
 
 ## System Preparation
 
